@@ -36,7 +36,7 @@ public class TaskService {
             .orElseThrow(() -> new ResourceNotFoundException(TASK_NOT_FOUND + id));
 
         existingTask.setTitle(taskDetails.getTitle());
-        existingTask.setCompleted(taskDetails.isCompleted());
+        existingTask.setCompleted(taskDetails.getCompleted());
         existingTask.setDescription(taskDetails.getDescription());
 
         return Optional.of(taskRepository.save(existingTask));
