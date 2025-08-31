@@ -33,7 +33,7 @@ public class TaskController {
 
     @GetMapping("")
     public List<Task> getall() {
-        return taskService.getAllTaks();
+        return taskService.getAllTask();
     }
 
     @GetMapping("/{id}")
